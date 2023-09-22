@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: darkcyan;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#card {
+	height: 500px;
+	width: 330px;
+	background-color: wheat;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 2px solid black;
+	position: relative;
+}
+
+#stories {
+	height: 100px;
+	width: 100%;
+	background-color: aqua;
+	border-bottom: 2px solid black;
+	padding: 10px;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.story {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	margin-inline: 3px;
+	background-color: chocolate;
+	border: 3px solid black;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.story img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#stories::-webkit-scrollbar {
+	display: none;
+}
+
+#fullscreen {
+	background-color: red;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -9;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+}
+
+#fullscreen img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	overflow: hidden;
+}
+
+#fullscreen h2 {
+	mix-blend-mode: difference;
+	color: white;
+	position: absolute;
+	font-size: xx-large;
+}
+
+.likes {
+	mix-blend-mode: color;
+	padding: 2px 10px;
+	border: 2px solid lavenderblush;
+}
+
+#ic {
+	color: red;
+	font-size: 5vmin;
+	position: absolute;
+	transform: translate(16vmin, 20vmin) scale(0);
+	z-index: 99;
+	/* visibility: hidden; */
+	transition: all ease 0.5s;
+	opacity: 1;
+}
